@@ -4,117 +4,143 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Avenue Parisienne — Luxury Modest Fashion</title>
-  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header" aria-label="Site header">
-    <div class="inner">
-      <div class="brand">
-        <span class="brand-name">Avenue Parisienne</span>
-        <span class="tagline" aria-hidden="true">Limited Edition - Online</span>
+  <!-- STICKY HEADER -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <div class="header-brand">
+        <h1 class="logo">AVENUE PARISIENNE</h1>
       </div>
-      <nav class="lang-toggle" aria-label="Language switcher">
-        <button class="lang-btn" data-lang="en" aria-pressed="true">EN</button>
-        <span class="sep" aria-hidden="true">/</span>
-        <button class="lang-btn" data-lang="ar" aria-pressed="false">ع</button>
+      
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-      <button class="cart-toggle" aria-label="Open cart" id="cartToggle" title="Cart">🛍️</button>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">EN / ع</button>
+        <button class="cart-icon" id="cartToggle" aria-label="Open shopping bag">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 2L7 6H4v14h16V6h-3L15 2M9 2h6M9 2v4h6V2" />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
     </div>
-    <nav class="primary-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="#home" data-nav="home" class="nav-link active" data-lang="en">Home</a></li>
-        <li><a href="#shop" data-nav="shop" data-lang="en">The Boutique</a></li>
-        <li><a href="#atelier" data-nav="atelier" data-lang="en">The Atelier</a></li>
-        <li><a href="#about" data-nav="about" data-lang="en">About</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <aside id="sideCart" class="side-cart" aria-label="Shopping cart">
-    <div class="side-cart-header">
-      <h3>Bag</h3>
-      <button id="cartClose" aria-label="Close cart">✕</button>
-    </div>
-    <div class="side-cart-content" id="cartContent">
-      <p class="empty" id="emptyCart">Your cart is empty.</p>
-    </div>
-    <div class="side-cart-footer" aria-live="polite">
-      <div class="subtotal-row">
-        <span>Subtotal</span>
-        <span id="cartSubtotal">$0</span>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="hero-title">Timeless Luxury</h2>
+        <p class="hero-subtitle">Handcrafted in Jeddah with European heritage. 100% natural fibers.</p>
+        <a href="#collections" class="btn btn-primary">Explore Collection</a>
       </div>
-      <button class="cta outline" id="checkoutBtn" disabled>Checkout</button>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1595777707802-0b4e5f92d4f5?w=1200&h=800&fit=crop" alt="Luxury fashion collection" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL SECTION -->
+  <section class="editorial">
+    <div class="editorial-block">
+      <div class="editorial-image">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&h=1000&fit=crop" alt="Premium fabric details" loading="lazy" />
+      </div>
+      <div class="editorial-text">
+        <h3 class="section-title">The Parisienne Story</h3>
+        <p>Avenue Parisienne represents the pinnacle of European modest fashion. Every piece is meticulously crafted in our private Jeddah atelier, combining Parisian elegance with Gulf sensibility.</p>
+        <p>We believe luxury is timeless, sustainable, and accessible. Our zero-polyester commitment ensures every garment breathes, moves, and endures with grace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS GRID -->
+  <section class="collections" id="collections">
+    <div class="section-header">
+      <h2 class="section-title">The Collection</h2>
+      <p class="section-subtitle">Curated pieces for the discerning woman</p>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Products will be inserted here -->
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h4>100% Natural</h4>
+        <p>Pure modal, linen, and Tencel. Zero synthetic fibers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✋</div>
+        <h4>Handcrafted</h4>
+        <p>Made in our private atelier in Jeddah with artisanal precision.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h4>Sourced Globally</h4>
+        <p>Finest fabrics from Europe. Crafted with Gulf consciousness.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏳</div>
+        <h4>Timeless Design</h4>
+        <p>Investment pieces that transcend seasons and trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPPING CART SIDEBAR -->
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping bag">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close bag">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your bag is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">﷼0</span>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn" disabled>Proceed to Checkout</button>
     </div>
   </aside>
 
-  <main id="home" class="page" data-lang="en" aria-label="Homepage">
-    <section class="hero" id="hero" aria-label="Hero">
-      <div class="hero-media">
-        <div class="image-placeholder" aria-label="Hero campaign placeholder">
-          <img src="images/hero-placeholder.jpg" alt="Hero campaign placeholder" />
-        </div>
-      </div>
-      <div class="hero-content">
-        <h1 class="eyebrow">THE FIRST EUROPEAN MODEST BRAND WITH 100% NATURAL FABRICS IN SAUDI ARABIA.</h1>
-        <p class="subhead">Avenue Parisienne represents a historic milestone for the Kingdom. We are redefining modesty by replacing synthetic textiles with the world's finest, ultra-breathable natural fibers—sourced from Paris and handcrafted in our private Jeddah atelier. Engineered to withstand the Gulf heat. Welcome to a zero-polyester reality.</p>
-        <div class="cta-row">
-          <a href="#shop" class="cta solid">Explore The Drop</a>
-        </div>
-      </div>
-    </section>
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
 
-    <section class="split-heritage" id="heritage" aria-label="Material heritage">
-      <div class="split-left">
-        <h2 class="section-title">Material Heritage</h2>
-        <p class="body">Our fabrics are chosen for health and longevity. 0% polyester policy ensures breathability, longevity, and luxury. Natural fibers like linen, modal, and Tencel are selected for their comfort in Gulf heat and timeless drape.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Avenue Parisienne</h4>
+        <p>Luxury modest fashion crafted for the modern woman.</p>
       </div>
-      <div class="split-right">
-        <div class="texture-placeholder">
-          <img src="images/texture-marble-placeholder.jpg" alt="Elegant marble texture placeholder" />
-        </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>hello@avenueparisienne.com<br>+966 (0) 12 345 6789</p>
       </div>
-    </section>
-
-    <section class="grid-section" id="shop" aria-label="Product grid">
-      <div class="section-header">
-        <h2 class="section-title">The Boutique</h2>
-        <h3 class="palette-title">THE HIJAB PALETTE: AN EXCLUSIVE FIRST.</h3>
-        <p class="description">Woven from 100% pure modal and silk-grade Tencel sourced from Europe. A curated palette of pure textile luxury offering a flawless drape and a breathable matte texture that radiates quiet luxury.</p>
+      <div class="footer-section">
+        <h4>Follow</h4>
+        <p><a href="#" target="_blank">Instagram</a> • <a href="#" target="_blank">Pinterest</a></p>
       </div>
-
-      <div class="product-grid" id="productGrid">
-        <article class="product-card"><div class="thumb"><img src="images/product-1.jpg" alt="Storm City Set" /></div><div class="product-info"><h4 class="product-title">Storm City Set</h4><p class="price">€3,800</p><button class="cta outline add-to-cart" data-id="Storm" data-price="3800">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/product-2.jpg" alt="Blazer Abaya" /></div><div class="product-info"><h4 class="product-title">The Blazer Abaya / Kyoto Kimono</h4><p class="price">€4,200</p><button class="cta outline add-to-cart" data-id="BlazerAbaya" data-price="4200">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/product-3.jpg" alt="Oversized Poplin Shirt" /></div><div class="product-info"><h4 class="product-title">Oversized Poplin Shirt</h4><p class="price">€1,320</p><button class="cta outline add-to-cart" data-id="OversizedPoplin" data-price="1320">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/product-4.jpg" alt="Layered Maxi Skirt" /></div><div class="product-info"><h4 class="product-title">Layered Maxi Skirt & Bamboo Slip Dress</h4><p class="price">€3,600</p><button class="cta outline add-to-cart" data-id="LayeredMaxi" data-price="3600">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/scarf-1.jpg" alt="Hijab Palette 1" /></div><div class="product-info"><h4 class="product-title">Premium Headscarf Palette</h4><p class="price">€1,150</p><button class="cta outline add-to-cart" data-id="HijabPalette" data-price="1150">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/scarf-2.jpg" alt="Hijab Palette 2" /></div><div class="product-info"><h4 class="product-title">Premium Headscarf Palette II</h4><p class="price">€1,150</p><button class="cta outline add-to-cart" data-id="HijabPalette2" data-price="1150">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/scarf-3.jpg" alt="Hijab Palette 3" /></div><div class="product-info"><h4 class="product-title">Premium Headscarf Palette III</h4><p class="price">€1,150</p><button class="cta outline add-to-cart" data-id="HijabPalette3" data-price="1150">Add to Bag</button></div></article>
-        <article class="product-card"><div class="thumb"><img src="images/scarf-4.jpg" alt="Hijab Palette 4" /></div><div class="product-info"><h4 class="product-title">Premium Headscarf Palette IV</h4><p class="price">€1,150</p><button class="cta outline add-to-cart" data-id="HijabPalette4" data-price="1150">Add to Bag</button></div></article>
-      </div>
-    </section>
-
-    <section class="atelier-story" id="about" aria-label="The Atelier Story">
-      <div class="story-rail">
-        <div class="story-block">
-          <h2 class="section-title">The Atelier Story</h2>
-          <p class="body">Fabrics travel from Paris to our private craftsmanship house in Jeddah. European art direction meets absolute modesty—crafted with care, finished with quiet luxury.</p>
-        </div>
-        <div class="image-placeholder">
-          <img src="images/atelier-1.jpg" alt="Atelier journey" />
-        </div>
-        <div class="story-block">
-          <p class="body">Each piece is a dialogue between Parisian refinement and Saudi sensibility. No compromise on natural fibers, no compromise on fit or drape.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" aria-label="Site footer">
-    <div class="inner">
-      <p class="brand-foot">Avenue Parisienne © 2026</p>
-      <p class="note">Premium European modest wear. 100% natural fabrics. Delivered worldwide.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Avenue Parisienne. All rights reserved.</p>
     </div>
   </footer>
 
